@@ -1,0 +1,54 @@
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1545040538" format="1.1" reprev="1" version="1"}%
+---+!! %TOPIC%
+%FORMFIELD{"Description"}%
+
+%TOC%
+
+This plugin lets you generate QR codes in your wiki apps. You simply feed it a string and it will render the QR image for it.
+
+*You type*:
+
+<verbatim class="tml">
+%QRCODE{"hello world"}%
+</verbatim>
+
+*You get*: %IF{"not context QRCodePluginEnabled" then="(if installed)"}%
+
+%IF{"context QRCodePluginEnabled"
+   then="$percntQRCODE{\"hello world\"}$percnt"
+   else="<img src='%ATTACHURLPATH%/hello-world.png' />"
+}%
+
+There are favious use cases for QR codes. Most notably, QR codes might be used to label physical objects by sticking a QR code on them. These may then
+be scanned in with a mobile device or any other QR code scanner to connect the physical object to with a virtual information about it.
+
+QR codes are also used for two-factor authentication to enhance security of a sign in process. Foswiki does provide a two-factor authentication with
+an additional plugin [[Foswiki:Extensions/TwoFactorAuthPlugin][TwoFactorAuthPlugin]].
+
+Note that this plugin generates QR codes on the server side. There is another plugin to generate them on the client side (i.e. on your browser) called
+[[Foswiki:Extensions/JQRCodeContrib][JQRCodeContrib]]]. Generating them using a !JavaScript plugin does have some advantages over codes generated on
+the server by adding extra flexibility in the way information can be processed. Onn the other side using QRCodePlugin to generate them on the server side
+has got the big advantage that these may be printed out or stored in PDF documents without any hassle.
+
+---++ Installation Instructions
+%$INSTALL_INSTRUCTIONS%
+
+---++ Dependencies
+%$DEPENDENCIES%
+
+---++ Change History
+
+%TABLE{columnwidths="7em" tablewidth="100%"}%
+| 17 Dec 2018 | initial release |
+
+%META:FORM{name="PackageForm"}%
+%META:FIELD{name="Author" title="Author" value="Michael Daum"}%
+%META:FIELD{name="Version" title="Version" value="%25$VERSION%25"}%
+%META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
+%META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
+%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25TOPIC%25"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2018 Michael Daum http://michaeldaumconsulting.com"}%
+%META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
+%META:FIELD{name="Home" title="Home" value="https://foswiki.org/Extensions/%25TOPIC%25"}%
+%META:FIELD{name="Support" title="Support" value="https://foswiki.org/Support/%25TOPIC%25"}%
+%META:FILEATTACHMENT{name="hello-world.png" attachment="hello-world.png" attr="" comment="" date="1545039554" size="224" user="ProjectContributor" version="1"}%

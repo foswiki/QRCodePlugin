@@ -1,0 +1,9 @@
+!noci
+data/System/QRCodePlugin.txt 0644
+lib/Foswiki/Plugins/QRCodePlugin/Core.pm 0644
+lib/Foswiki/Plugins/QRCodePlugin/DEPENDENCIES 0644
+lib/Foswiki/Plugins/QRCodePlugin.pm 0644
+pub/System/QRCodePlugin/Makefile 0644
+pub/System/QRCodePlugin/qrcode.css 0644
+pub/System/QRCodePlugin/qrcode.css.gz 0644
+pub/System/QRCodePlugin/qrcode.uncompressed.css 0644
