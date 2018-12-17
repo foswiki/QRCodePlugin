@@ -26,7 +26,7 @@ QR codes are also used for two-factor authentication to enhance security of a si
 an additional plugin [[Foswiki:Extensions/TwoFactorAuthPlugin][TwoFactorAuthPlugin]].
 
 Note that this plugin generates QR codes on the server side. There is another plugin to generate them on the client side (i.e. on your browser) called
-[[Foswiki:Extensions/JQRCodeContrib][JQRCodeContrib]]]. Generating them using a !JavaScript plugin does have some advantages over codes generated on
+[[Foswiki:Extensions/JQRCodeContrib][JQRCodeContrib]]. Generating them using a !JavaScript plugin does have some advantages over codes generated on
 the server by adding extra flexibility in the way information can be processed. Onn the other side using QRCodePlugin to generate them on the server side
 has got the big advantage that these may be printed out or stored in PDF documents without any hassle.
 
@@ -39,7 +39,7 @@ has got the big advantage that these may be printed out or stored in PDF documen
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
-| 17 Dec 2018 | initial release |
+|  17 Dec 2018 | initial release |
 
 %META:FORM{name="PackageForm"}%
 %META:FIELD{name="Author" title="Author" value="Michael Daum"}%
