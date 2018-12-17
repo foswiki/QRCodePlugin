@@ -3,3 +3,11 @@ pub/System/QRCodePlugin/qrcode.css
 pub/System/QRCodePlugin/qrcode.css.gz
 igp_*
 
+*.swp
+/QRCodePlugin.md5
+/QRCodePlugin.sha1
+/QRCodePlugin.tgz
+/QRCodePlugin.txt
+/QRCodePlugin.zip
+/QRCodePlugin_installer
+/QRCodePlugin_installer.pl
