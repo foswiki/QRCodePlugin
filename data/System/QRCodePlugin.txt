@@ -4,6 +4,8 @@
 
 %TOC%
 
+---++ Description
+
 This plugin lets you generate QR codes in your wiki apps. You simply feed it a string and it will render the QR image for it.
 
 *You type*:
@@ -29,6 +31,31 @@ Note that this plugin generates QR codes on the server side. There is another pl
 [[Foswiki:Extensions/JQRCodeContrib][JQRCodeContrib]]. Generating them using a !JavaScript plugin does have some advantages over codes generated on
 the server by adding extra flexibility in the way information can be processed. Onn the other side using QRCodePlugin to generate them on the server side
 has got the big advantage that these may be printed out or stored in PDF documents without any hassle.
+
+---++ Syntax
+
+<verbatim class="tml">
+%QRCODE{"<string>" ...params.."}%
+</verbatim>
+
+| *Parameter* | *Description* | *Default* |
+| ="..."= or =text="..."= | string to be encoded; this may also contain standard format tokens (=$percnt=, =$dollar= etc) in which case the string is processed as a wiki application the result of which is then encoded | |
+| =class="..."= | css class added to the =&lt;img ...>= element being inserted into the html page | =qrCode= |
+| =format="..."= | format string of the result; this should be some kind of= &lt;img ..>= tag with variables =$uri= expanding to the inline image data and =$class= to expand to the css classes | =&lt;img src="$uri=" class="$class" />= |
+| =level="1/2/3/4/5"= | level of error correction | 1 | 
+| =scale="1/2/.../100"= | scale of the image | 3 |
+| =quiet="&lt;number>"= | margin of quiet whitespace around the QR code being generated | 0 |
+
+---++ REST handler
+
+In addition to generating QR codes using the =%QRCODE= makro these may also be generated using a REST handler:
+
+<verbatim class="tml">
+<img src="%SCRIPTURLPATH{"rest"}%/QRCodePlugin/encode?...<url-params>...
+</verbatim>
+
+The =&lt;url-params= basically are the same parameters available to the =%QRCODE= macro, except they need to be [[%SYSTEMWEB%.VarENCODE][url encoded]].
+
 
 ---++ Installation Instructions
 %$INSTALL_INSTRUCTIONS%
