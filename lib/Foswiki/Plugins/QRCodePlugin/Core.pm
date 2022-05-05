@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, https://foswiki.org/
 #
-# QRCodePlugin is Copyright (C) 2018 Michael Daum http://michaeldaumconsulting.com
+# QRCodePlugin is Copyright (C) 2018-2022 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -53,8 +53,8 @@ sub QRCODE {
 
   my $result = $params->{format} || '<img src="$uri" class="$class" />';
 
-  $result =~ s/\$uri/$uri/g;
-  $result =~ s/\$class/$class/g;
+  $result =~ s/\$uri\b/$uri/g;
+  $result =~ s/\$class\b/$class/g;
 
   return $result;
 }

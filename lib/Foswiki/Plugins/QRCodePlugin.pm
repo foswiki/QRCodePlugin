@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, https://foswiki.org/
 #
-# QRCodePlugin is Copyright (C) 2018 Michael Daum http://michaeldaumconsulting.com
+# QRCodePlugin is Copyright (C) 2018-2022 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -20,8 +20,8 @@ use warnings;
 
 use Foswiki::Func ();
 
-our $VERSION = '1.00';
-our $RELEASE = '17 Dec 2018';
+our $VERSION = '1.01';
+our $RELEASE = '05 May 2022';
 our $SHORTDESCRIPTION = 'QR code generator';
 our $NO_PREFS_IN_TOPIC = 1;
 our $core;
