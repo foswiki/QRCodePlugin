@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1545040538" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1706207601" format="1.1" version="1"}%
 ---+!! %TOPIC%
 %FORMFIELD{"Description"}%
 
@@ -25,10 +25,10 @@ There are favious use cases for QR codes. Most notably, QR codes might be used t
 be scanned in with a mobile device or any other QR code scanner to connect the physical object to with a virtual information about it.
 
 QR codes are also used for two-factor authentication to enhance security of a sign in process. Foswiki does provide a two-factor authentication with
-an additional plugin [[Foswiki:Extensions/TwoFactorAuthPlugin][TwoFactorAuthPlugin]].
+an additional plugin [[https://foswiki.org/Extensions/PluggableAuthContrib][PluggableAuthContrib]].
 
 Note that this plugin generates QR codes on the server side. There is another plugin to generate them on the client side (i.e. on your browser) called
-[[Foswiki:Extensions/JQRCodeContrib][JQRCodeContrib]]. Generating them using a !JavaScript plugin does have some advantages over codes generated on
+[[https://foswiki.org/Extensions/JQRCodeContrib][JQRCodeContrib]]. Generating them using a !JavaScript plugin does have some advantages over codes generated on
 the server by adding extra flexibility in the way information can be processed. Onn the other side using QRCodePlugin to generate them on the server side
 has got the big advantage that these may be printed out or stored in PDF documents without any hassle.
 
@@ -57,7 +57,6 @@ In addition to generating QR codes using the =%QRCODE= makro these may also be g
 
 The =&lt;url-params= basically are the same parameters available to the =%QRCODE= macro, except they need to be [[%SYSTEMWEB%.VarENCODE][url encoded]].
 
-
 ---++ Installation Instructions
 %$INSTALL_INSTRUCTIONS%
 
@@ -67,6 +66,7 @@ The =&lt;url-params= basically are the same parameters available to the =%QRCODE
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+|  25 Jan 2024 | fixed packaging issue |
 |  05 May 2022 | minor docu fixes |
 |  17 Dec 2018 | initial release |
 
@@ -76,7 +76,7 @@ The =&lt;url-params= basically are the same parameters available to the =%QRCODE
 %META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
 %META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
 %META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25TOPIC%25"}%
-%META:FIELD{name="Copyright" title="Copyright" value="2018-2022 Michael Daum"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2018-2024 Michael Daum"}%
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="https://foswiki.org/Extensions/%25TOPIC%25"}%
 %META:FIELD{name="Support" title="Support" value="https://foswiki.org/Support/%25TOPIC%25"}%
