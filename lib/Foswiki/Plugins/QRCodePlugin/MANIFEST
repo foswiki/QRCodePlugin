@@ -2,6 +2,7 @@
 data/System/QRCodePlugin.txt 0644
 lib/Foswiki/Plugins/QRCodePlugin/Core.pm 0644
 lib/Foswiki/Plugins/QRCodePlugin/DEPENDENCIES 0644
+lib/Foswiki/Plugins/QRCodePlugin/MANIFEST 0644
 lib/Foswiki/Plugins/QRCodePlugin.pm 0644
 pub/System/QRCodePlugin/hello-world.png 0644
 pub/System/QRCodePlugin/Makefile 0644
